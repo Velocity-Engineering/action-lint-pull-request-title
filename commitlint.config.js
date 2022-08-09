@@ -1,4 +1,10 @@
-// Source: @commitlint/config-conventional
+/*
+Rules are made up by a name and a configuration array. The configuration array contains:
+Level [0..2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
+Applicable always|never: never inverts the rule.
+Value: value to use for this rule.
+ */
+
 module.exports = {
   rules: {
     'body-leading-blank': [1, 'always'],
@@ -6,8 +12,8 @@ module.exports = {
     'footer-leading-blank': [1, 'always'],
     'footer-max-line-length': [2, 'always', 100],
     'header-max-length': [2, 'always', 100],
-    'scope-empty': [2, 'never'],
-    'scope-case': [2, 'always', 'lower-case'],
+    'scope-empty': [0, 'never'],
+    'scope-case': [0, 'always', 'upper-case'],
     'subject-case': [2, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
